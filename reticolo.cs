@@ -17,7 +17,7 @@ namespace ConsoleApp2
             for (int i = x - 1; i > 1; i--)
                 factorial *= i;
             Console.WriteLine($"{x}!={ factorial}");
-
+        }
         static void numGuessing()
         {
             int num = Convert.ToInt32(Console.ReadLine());
@@ -51,9 +51,29 @@ namespace ConsoleApp2
             }
         }
 
+        static void Fibonaci()
+        {
+            int n;
+            int x1 = 1, x2 = 1;
+            Console.WriteLine("Введите количество чисел Фибоначчи");
+            do
+            {
+                n = Convert.ToInt32(Console.ReadLine());
+            } while (n < 0);
+
+            Console.WriteLine(n + " первых членов последовательности Фибоначчи: ");
+            Console.Write(x1 + " ");
+            for (int i = 1; i < n; i++)
+            {
+                x2 += x1;
+                x1 = x2 - x1;
+                Console.Write(x1 + " ");
+            }
+        }
         static void Main(string[] args)
         {
             Factorial();
+            Fibonaci();
             numGuessing();
         }
     }
