@@ -114,8 +114,6 @@ namespace ConsoleApp1
     {
         public static void randomDuckKryaking(Dictionary<int, Duck> ducks)
         {
-            Random rnd = new Random();
-            int num = rnd.Next(0, ducks.Count);
             int localTime = DateTime.Now.Millisecond;
             ducks[(localTime / 100) + 1].krya();
         }
