@@ -15,7 +15,7 @@ namespace ConsoleApp1
 
         public virtual void krya()
         {
-            Console.WriteLine("Hi! I'm a ordinary duck.");
+            Console.WriteLine("Hi! I'm an ordinary duck.");
         }
     }
     class DarkwingDuck : Duck
