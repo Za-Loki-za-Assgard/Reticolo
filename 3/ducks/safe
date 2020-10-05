@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Safe
+{
+    class Safe<T>
+    {
+        public readonly T variable;
+        public Safe(T n)
+        {
+            variable = n;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Input your variable");
+            var x = Convert.ToInt32(Console.ReadLine());
+            Safe<int> safe1 = new Safe<int>(x);
+            Console.WriteLine($"the value of variable is {safe1.variable}");
+            Console.ReadKey();
+        }
+    }
+}
